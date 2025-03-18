@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap-portfolio-Suren</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: navy;
+            color: white; 
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(45deg, #001f3f, #003366); 
+            color: white;
+            border-radius: 10px;
+        }
+
+        .card {
+            background-color: #ffffff; 
+            color: black;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #001f3f; 
+            color: white;
+        }
+
+        .navbar {
+            background-color: #033466; 
+        }
+
+        .btn-primary {
+            background-color: #004080; 
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #00509e; 
+        }
+
+        .project-card {
+            margin-bottom: 20px;
+        }
+        .position-fixed {
+            position: fixed;
+        }
+       
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            color: #ffffff; 
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .bubbles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .bubble {
+            position: absolute;
+            bottom: -50px;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(62, 47, 71, 0.5);
+            border-radius: 50%;
+            animation: rise 10s infinite;
+        }
+        .bubble:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            animation-duration: 12s;
+            left: 20%;
+        }
+        .bubble:nth-child(3) {
+            width: 30px;
+            height: 30px;
+            animation-duration: 8s;
+            left: 40%;
+        }
+        @media (max-width: 768px) {
+    .hero {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .project-card img {
+        width: 100%; 
+        height: auto;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+    }
+
+        @keyframes rise {
+            0% {
+                bottom: -50px;
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                bottom: 100%;
+                opacity: 0;
+            }
+        }
+
+    
+    .timeline {
+    position: relative;
+    margin: 50px 0;
+    padding: 0;
+    }
+
+    .timeline-item {
+        position: relative;
+        width: 50%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+    }
+
+    .timeline-item .content {
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    .timeline-item.left {
+        left: 0;
+        padding-left: 30px;
+        text-align: left;
+    }
+
+    .timeline-item.right {
+        left: 50%;
+        padding-right: 30px;
+        text-align: right;
+    }
+
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 12px;
+        height: 12px;
+        background-color: #004080; 
+        border: 2px solid #450404;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    .timeline-item::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        width: 2px;
+        background-color: #004080; 
+    }
+
+    @media (max-width: 768px) {
+        .timeline-item {
+            width: 100%;
+            padding-left: 50px;
+            padding-right: 0;
+        }
+        .timeline-item.left,
+        .timeline-item.right {
+            left: 0;
+            text-align: left;
+        }
+        .timeline-item::after {
+            left: 20px;
+        }
+        .timeline-item::before {
+            left: 20px;
+        }
+    }
+    #skills .col-md-4 {
+
+    padding: 20px; 
+    margin-bottom: 20px; 
+    background-color: transparent;
+
+    }
+
+    #skills h3 {
+        margin-bottom: 15px;
+        color: white; 
+    }
+
+    #skills p {
+        color: white; 
+    }
+
+    @media (max-width: 768px) {
+        #skills .col-md-4 {
+            margin-bottom: 15px; 
+        }
+    }
+    input::placeholder,
+    textarea::placeholder {
+        color: #999999; 
+        font-style: italic; 
+        opacity: 1; 
+
+    }
+
+    input:focus::placeholder,
+    textarea:focus::placeholder {
+        color: #555555; 
+    }
+
+    .animated-text {
+    overflow: hidden; 
+    white-space: nowrap; 
+    color: #23a9a9; 
+    border-right: 2px solid ; 
+    color: #23a9a9; 
+    font-size: 2rem; 
+    opacity: 0; 
+    width: 0; 
+
+    animation: fadeIn 2s ease-in-out forwards, 
+               typing 3s steps(30, end) forwards, 
+               blink-caret 0.5s step-end infinite; 
+    animation-delay: 3.1s; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from {
+        border-right-color: white;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Surendra's Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <section class="container hero">
+    <img src="Images/hero-image.png" alt="Hero-section image">
+    <h2 class="animated-text">Hello, I'm Suren Pal!</h2>
+    <p>I am passionate about web development, design, and crafting unique projects.As a passionate software developer, I thrive on solving complex problems and building efficient, user-focused solutions. With expertise in both front-end and back-end development, I bring ideas to life by writing clean, scalable, and maintainable code. My experience spans various technologies, including HTML, CSS, JavaScript, Java, Spring Boot, and MySQL. I am always eager to learn and adapt to emerging technologies, ensuring my projects are innovative and aligned with industry standards. Collaborating with teams and delivering impactful software is what drives me every day."
+
+            Feel free to tweak it to align with your personal style or add specific projects or achievements! Let me know if you need assistance refining it further.</p>
+    <a href="#projects" class="btn btn-primary">View My Work</a>
+    </section>
+
+   
+    <section id="timeline" class="container my-5">
+    <h2 class="animated-text text-center mb-4">My Journey</h2>
+    <div class="timeline">
+        <div class="timeline-item left">
+            <div class="content">
+                <h5>2023 - Present</h5>
+                <h6>Software Developer</h6>
+                <p>Currently Freelancing, focusing on building web applications and back-end systems.</p>
+            </div>
+        </div>
+        <div class="timeline-item right">
+            <div class="content">
+                <h5>2021 - 2023</h5>
+                <h6>Nagoya Future Technology College</h6>
+                <p>Graduated from Nagoya Future Technology College, specializing in software & Application development ,data-bs-target& Server.
+                   Worked on a team to develop a responsive e-commerce platform using HTML,Css & Java.
+                </p>
+            </div>
+        </div>
+        <div class="timeline-item left">
+            <div class="content">
+                <h5>2019 - 2020</h5>
+                <h6>Nagoya Fukutoku Japanese Language School</h6>
+                <p>Learn Japanese Language and about the Culture of Japan. Visited Osaka Tokyo and Aichi.
+                   Makes a lots of friend from different countries.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<hr>
+
+<section id="skills" class="container my-5">
+    <h2 class="animated-text text-center mb-4">Skills</h2>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <h3>Frontend</h3>
+            <p>HTML, CSS, JavaScript, Bootstrap</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Backend</h3>
+            <p>Node.js, Express</p>
+            <p>Java, Spring-boot, JDBC, MySQL</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Other Tools</h3>
+            <p>Git, GitHub, Figma</p>
+        </div>
+    </div>
+</section>
+
+<hr>
+    
+    <section id="projects" class="container my-5">
+        <h2 class="animated-text text-center mb-4">Projects</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="Images/weather.png" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Weather App</h5>
+                        <p class="card-text">This is the App developed using Java spring-boot  and JDBC as a Mysql.Welcome to this beautiful app .</p>
+                        <a href="#" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="Images/rental car.png" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Car Rental</h5>
+                        <p class="card-text">A car rental app is a user-friendly platform designed to make renting vehicle designed to make renting vehicles.</p>
+                        <a href="#" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="Images/employ.png" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Employment Register App</h5>
+                        <p class="card-text">An employment register app is a practical tool designed to streamline the process of managing job opportunities</p>
+                        <a href="#" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="animated-text text-center mb-4">What People Say</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <blockquote class="blockquote">
+                        <p>"Surendra is a talented developer who delivers high-quality work!"</p>
+                        <footer class="blockquote-footer">Jhon Snow</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-6">
+                    <blockquote class="blockquote">
+                        <p>"An exceptional collaborator and problem-solver!Good Job!! Keep it Up"</p>
+                        <footer class="blockquote-footer">Mother of Dragon</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contact" class="container my-5">
+        <h2 class="animated-text text-center mb-4">Contact Me</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+    <div class="bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+</div>
+
+
+    
+    <a href="#" class="btn btn-secondary position-fixed bottom-0 end-0 m-3">Back to Top</a>
+
+    
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2025 Surendra's Portfolio. All rights reserved.</p>
+        <p>Follow me on <a href="#" class="text-info">Github</a> or <a href="#" class="text-info">Indeed</a>.</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
