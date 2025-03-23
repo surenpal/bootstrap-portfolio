@@ -21,6 +21,9 @@
 
         }
         
+        #logo-text:hover {
+            scale: 1.05;
+        }
     
         .hero {
             text-align: center;
@@ -30,6 +33,10 @@
             padding: 20px;
             text-align: center;
     
+        }
+
+        .hero:hover {
+            scale: 1.05;
         }
 
 
@@ -54,17 +61,22 @@
             color:#003E3E;
         }
 
+        .nav-item .nav-link:hover {
+            color: deeppink;
+            scale: 1.1;
+
+        }
+
         #x-colo {
             background-color: teal; 
         }
-        
-        .btn-primary {
-            background-color: skyblue; 
-            border: none;
-        }
 
-        .btn-primary:hover {
-            background-color: teal; 
+
+        #x-colo:hover{
+
+            background-color: rgb(10, 72, 92); 
+            transition: 100ms ease-in-out;
+            scale: 1.1;
         }
 
         .project-card {
@@ -168,48 +180,21 @@
         text-align: right;
     }
 
-    .timeline-item::before {
-        content: '';
-        position: absolute;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 12px;
-        height: 12px;
-        background-color: #004080; 
-        border: 2px solid #450404;
-        border-radius: 50%;
-        z-index: 1;
-    }
-
-    .timeline-item::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 100%;
-        width: 2px;
-        background-color: #004080; 
-    }
 
     @media (max-width: 768px) {
         .timeline-item {
             width: 100%;
             padding-left: 50px;
             padding-right: 0;
+            background-color: none; 
+            border: none;
         }
         .timeline-item.left,
         .timeline-item.right {
             left: 0;
             text-align: left;
         }
-        .timeline-item::after {
-            left: 20px;
-        }
-        .timeline-item::before {
-            left: 20px;
-        }
+
     }
     #skills .col-md-4 {
 
@@ -231,6 +216,10 @@
 
     p {
         color: black; 
+    }
+    p:hover {
+        color: teal; 
+        scale: 1.02;
     }
 
     @media (max-width: 768px) {
@@ -293,3 +282,40 @@
     }
 }
 
+
+@keyframes appaear {
+    from {
+        opacity: 0;
+        clip-path: inset(100% 100% 0 0);
+    }
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        clip-path: inset(100% 100% 0 0);
+    }
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+.content{
+    animation: appaear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+
+h2, h3, h5, h6, p {
+    text-decoration: none;
+}
+
+h2, h3, h5, h6, p:hover {
+    transform: scale(1.02);
+}
