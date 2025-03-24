@@ -20,6 +20,11 @@
             height: 30px;
 
         }
+
+        .navbar-toggler-icon:hover {
+            background-color: teal;
+
+        }
         
         #logo-text:hover {
             scale: 1.05;
