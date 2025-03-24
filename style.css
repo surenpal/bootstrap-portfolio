@@ -317,10 +317,10 @@
 }
 
 
-h2, h3, h5, h6, p {
+#boom{
     text-decoration: none;
 }
 
-h2, h3, h5, h6, p:hover {
-    transform: scale(1.02);
+#boom:hover {
+    scale: 1.02;
 }
