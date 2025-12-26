@@ -2,7 +2,9 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #FDFEFF;
+            /*background-color: #FDFEFF; */
+            /*background-image: url(/Images/bg.jpg);*/
+            opacity: 0.9;
         }
         
         #logo-text {
